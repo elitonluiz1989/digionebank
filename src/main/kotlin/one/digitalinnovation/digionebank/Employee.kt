@@ -2,8 +2,19 @@ package one.digitalinnovation.digionebank
 
 import java.math.BigDecimal
 
-class Employee(
-    override val name: String,
-    override val document: String,
-    val salary: BigDecimal
-) : Person(name, document)
+abstract class Employee(
+    name: String,
+    document: String,
+    val salary: Double
+) : Person(name, document) {
+    protected abstract fun calculateGratification(): Double
+
+    override fun toString(): String {
+        return """
+            Name: $name
+            Document: $document
+            Salary: $salary
+            Gratification: ${calculateGratification()}
+        """.trimIndent()
+    }
+}

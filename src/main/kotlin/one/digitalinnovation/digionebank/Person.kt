@@ -1,6 +1,6 @@
 package one.digitalinnovation.digionebank
 
-open class Person (
-    open val name: String,
-    open val document: String
+abstract class Person (
+    val name: String,
+    val document: String
 )
