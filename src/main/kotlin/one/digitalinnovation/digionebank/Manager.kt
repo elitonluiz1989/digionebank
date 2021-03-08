@@ -8,6 +8,6 @@ class Manager(
 ) : Employee(name, document, salary), Authenticable {
     override fun calculateGratification() = salary * 0.4
 
-    override fun login() = "123" == password
+    override fun authenticated() = "123" == password
 
 }
