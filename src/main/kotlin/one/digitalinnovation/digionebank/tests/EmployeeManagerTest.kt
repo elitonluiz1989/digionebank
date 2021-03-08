@@ -1,9 +1,10 @@
 package one.digitalinnovation.digionebank.tests
 
-import one.digitalinnovation.digionebank.Analyst
+import one.digitalinnovation.digionebank.Manager
 
 fun main() {
-    val manager = Analyst(name = "Alice", document = "091.786.543-21", salary = 5000.0)
+    val manager = Manager(name = "Alice", document = "091.786.543-21", salary = 5000.0, password = "123")
 
     EmployeeTestTools.print(manager)
+    EmployeeTestTools.login(manager)
 }

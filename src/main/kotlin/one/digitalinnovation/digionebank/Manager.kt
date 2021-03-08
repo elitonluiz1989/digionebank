@@ -3,7 +3,11 @@ package one.digitalinnovation.digionebank
 class Manager(
     name: String,
     document: String,
-    salary: Double
-) : Employee(name, document, salary) {
+    salary: Double,
+    override val password: String
+) : Employee(name, document, salary), Authenticable {
     override fun calculateGratification() = salary * 0.4
+
+    override fun login() = "123" == password
+
 }
